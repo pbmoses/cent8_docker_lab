@@ -1,0 +1,35 @@
+docker ps --format "{{.Ports}}" | awk -F':|-' 'BEGIN{ print "[all]"};{ print "localhost ansible_ssh_port="$2 }'
+killall = docker kill $(docker ps -q)
+
+docker ps --format "{{.ID}} {{.Ports}}" | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_ssh_port="$3 }'>inventory.ini
+
+ssh-copy-id -p 32785 pmo@localhost
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAQEAxAWH3gDaudcxn+mD4mJOsw7+YKhzhYJmGCa7VWrE4qf5IYpqZiEG
+RZ4geeoe8jDJZ8QYCUu7gyNf/AfWeESx972qmXa2nEdfUJyhMYD1W/YFovO6QAyYOfmfu0
+/KXxccLQDNrVDZqZpsLeDBzbwYkn6UBfaVqd4Uy6mlvRtFvfSfkFTwR9iy0AgCYRjGTg0O
+lbTC4D+CdPPz5PPAmcqcXGcz6cvpLKmsrQCUupbwNssHSC9TN6Mvt9NfWaF6k22LyIjYqP
+Y+Ts6osQR71sjSpqt8EKo0mableCdhXLSbR+9AlSCSQWoDhyTKZE5ItKAy/frpvZpD+mSF
+/medc/tvIwAAA9AR59atEefWrQAAAAdzc2gtcnNhAAABAQDEBYfeANq51zGf6YPiYk6zDv
+5gqHOFgmYYJrtVasTip/khimpmIQZFniB56h7yMMlnxBgJS7uDI1/8B9Z4RLH3vaqZdrac
+R19QnKExgPVb9gWi87pADJg5+Z+7T8pfFxwtAM2tUNmpmmwt4MHNvBiSfpQF9pWp3hTLqa
+W9G0W99J+QVPBH2LLQCAJhGMZODQ6VtMLgP4J08/Pk88CZypxcZzPpy+ksqaytAJS6lvA2
+ywdIL1M3oy+3019ZoXqTbYvIiNio9j5OzqixBHvWyNKmq3wQqjSZpuV4J2FctJtH70CVIJ
+JBagOHJMpkTki0oDL9+um9mkP6ZIX+Z51z+28jAAAAAwEAAQAAAQBH6/eT/yBBu7FbiSR4
+tbVGgaPX9zabr+KhzeRCTPB8cUE5iz3Kxycz9/bWhI5iMoBTcGGZV44vaZVYNc/9RMc/rP
+mhYStTX+SbAT0rmrNr0HL0/RRDV9uquepfocEQ7rvJz1en1dhnIF+83ZB+Whtx9Lt/DKCR
+OQjMSSyknBMUxL2eXnqLsnkvwdAeSBzxmJoIUlHdmyqkMhpxrWiq+Xz57TGu4rIzr2km+c
+nVDX14x99gZ7E3jZEMvHNrKbSoL7E8ePhrLtsCgQngvf70UzR0bPCMklGoYi0UdNGu6unm
+V58djjansYHuXBnYDwMi0DUrxqXtdVg3oqD6eMDAzz/BAAAAgCjYtLiD2ZKo1KytcKkU2P
+wTSGJESM3D8ybY94Ql2ysN7J1U6bVEKvGoEs5h0MfNvFNldMDLZ63wINM0osOx1D7szFQ6
+olGaV5+8vPrMgxmCpVPOgTr7i9bTDm95tXJI5TvLc6RnAhEcvreQpvn0rsz+n+yxjc1TKX
+EcHzkPKzbEAAAAgQD0Re2IQo/FMZbpBwATEVVzVYPWnU6HKAuVhiwDTIQnnxBHoZsegCQI
+oOyNwigm/5Td7G6Y4087v2TNq6RFHiqC38RYF/6L0UP9dGqshG73xH8K7kcGmLaZ8ujQAW
+uWRbX9nxrMT7BsC7v8dXpArZAYmaSZZmG/dEJViG+fZrqj8wAAAIEAzW6ZpZ433Q0GRpj4
+iQ9OGx+x6TeqplmchJJEYdis+uOD5Z3Yq/Hax9tqMIDRjnIHS4eq/gFM0EfsFjrOTaXDM1
+1icM7k2e5T4REJpDNuvBO/wSgmAPvZ/HRhvdbnPFAztcH9oyHHzD8Q6B77mffo3HPBP39H
+nhX6EVHGN/5ORBEAAAAUYW5zaWJsZUA4ZDQ4NTg3ODJmZmIBAgMEBQYH
+-----END OPENSSH PRIVATE KEY-----
+
+
