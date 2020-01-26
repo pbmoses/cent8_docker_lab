@@ -14,11 +14,14 @@
 Copy the sources to your docker host and build the container:
 
         # docker build --rm -t <username>/ssh:centos8 .
+        
 
 To run:
 (run as many as you would like, within reason for your hardware)
         # docker run -d -p 22 <username>/ssh:centos8
 
+        #docker ps (look for your port, you need that to login)
+        ssh pmo@localhost -p <port from above> -- use newpass for pass
 To Generate an inventory.ini file:
         
         #docker ps --format "{{.ID}} {{.Ports}}" | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_connection=local" " ansible_ssh_port="$3 }'>inventory.ini
