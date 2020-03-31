@@ -3,7 +3,7 @@
 #
 # centos8 plus things to make a burly yet disposable ansible test image
 
-FROM centos:8
+FROM centos:latest
 MAINTAINER philmoses@gmail.com
 
 RUN yum -y update; yum clean all
