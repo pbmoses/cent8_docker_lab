@@ -16,5 +16,5 @@ RUN ssh-keygen -t rsa -f /etc/ssh/ssh_host_rsa_key -N ''
 RUN chmod 755 /start.sh
 RUN ./start.sh
 RUN rm /run/nologin
-RUN echo 'ansible ALL=(ALL:ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
+RUN echo 'sshuser ALL=(ALL:ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
