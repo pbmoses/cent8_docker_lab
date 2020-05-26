@@ -22,6 +22,8 @@ Copy the sources to your docker host and build the container:
 
         # git clone https://github.com/pbmoses/cent8_docker_lab.git
         
+        # cd cent8_docker_lab
+        
         # docker build --rm -t localhost/cent8_ansible:v1 .
         
 
