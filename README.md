@@ -8,7 +8,7 @@
 
 
 
-#in no way or form is this meant for production. This is a not so lightweight ephemeral SSH/Ansible container
+#in no way or form is this meant for production. This is a not so lightweight ephemeral SSH/Ansible container. ephemeral means when you stop the container it's gone as well as any/all changes you made to it... what better way to test your disaster recovery :)
 
 
 #naturally, there's a bunch this wouldn't handle. It's not be-all-end-all. It's just a simple scrappy tool for testing. 
@@ -37,9 +37,12 @@ To run:
 
 
         #docker run -d -p 22 localhost/cent8_ansible:lv1
-
+        (you can spin up as many containers as you need for your testing)
+        
         #docker ps (look for your port, you need that to login)
-        ssh pmo@localhost -p <port from above> -- use the password from the start script for pass
+       
+
+       
 To Generate an inventory.ini file:
         
         #docker ps --format "{{.ID}} {{.Ports}}" | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_connection=local" " ansible_ssh_port="$3 }'>inventory.ini
@@ -47,7 +50,7 @@ To Generate an inventory.ini file:
 
 To test, use the port that was just located:
 
-        # ssh -p <port> ansible@localhost 
+       #ssh -i ./demo_ansible_docker sshuser@0.0.0.0 -p 32776
 
 To test Ansible:
         
@@ -62,4 +65,4 @@ Sample output:
     "ping": "pong"
 }
 
-Build your playbooks, your roles and experiment. 
+Build your playbooks, your roles and experiment. Edit your inventory file to 
