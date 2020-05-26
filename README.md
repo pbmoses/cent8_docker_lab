@@ -31,7 +31,7 @@ To run:
 ##NEVER RE-USE THESE KEYS OUTSIDE OF YOUR TEST ENVIRONMENT
 
 
-##you'll probably want to either acceot the keys in known_hosts or skip verification
+##you'll probably want to either accept the keys in known_hosts or skip verification
 (run as many as you would like, within reason for your hardware)
 
 
