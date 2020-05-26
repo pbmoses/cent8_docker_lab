@@ -17,7 +17,7 @@
 
 Copy the sources to your docker host and build the container:
 
-        # docker build --rm -t <username>/ssh:centos8 .
+        # docker build --rm -t localhost/cent8_ansible:v1 .
         
 
 To run:
