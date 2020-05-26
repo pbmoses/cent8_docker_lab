@@ -27,7 +27,11 @@ Copy the sources to your docker host and build the container:
 To run:
 
 ##CHANGE YOUR KEY PERMISSIONS! (chmod 600 demo_ansible_docker)
-###NEVER RE-USE THESE KEYS OUTSIDE OF YOUR TEST ENVIRONMENT
+
+
+##NEVER RE-USE THESE KEYS OUTSIDE OF YOUR TEST ENVIRONMENT
+
+
 ##you'll probably want to either acceot the keys in known_hosts or skip verification
 (run as many as you would like, within reason for your hardware)
         # docker run -d -p 22 localhost/cent8_ansible:
