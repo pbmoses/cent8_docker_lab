@@ -44,7 +44,7 @@ To run:
        
 To Generate an inventory.ini file:
         
-        #docker ps --format "{{.ID}} {{.Ports}}" | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_connection=local" " ansible_ssh_port="$3 }'>inventory.ini
+        #docker ps --format "{{.ID}} {{.Ports}}" | grep 22 | -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_connection=local" " ansible_ssh_port="$3 }'>inventory.ini
 
 
 To test, use the port that was just located:
