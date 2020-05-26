@@ -29,7 +29,7 @@ Copy the sources to your docker host and build the container:
 
 To run:
 
-##CHANGE YOUR KEY PERMISSIONS! (chmod 600 demo_ansible_docker)
+##CHANGE YOUR KEY PERMISSIONS! (chmod 600 demo_ansible_docker*)
 
 
 ##NEVER RE-USE THESE KEYS OUTSIDE OF YOUR TEST ENVIRONMENT
