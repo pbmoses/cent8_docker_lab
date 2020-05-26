@@ -1,4 +1,6 @@
 #!/bin/bash
+##breakglass in case you F up the keys. 
+###obviously never use this in any public/prod env. 
 
 __create_user() {
 # Create a user to SSH into as.
