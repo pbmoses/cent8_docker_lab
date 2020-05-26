@@ -64,4 +64,4 @@ Sample output:
     "ping": "pong"
 }
 
-Build your playbooks, your roles and experiment. Edit your inventory file to 
+Build your playbooks, your roles and experiment. Edit your inventory file to your preference. 
