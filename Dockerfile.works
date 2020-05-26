@@ -17,7 +17,4 @@ RUN chmod 755 /start.sh
 RUN ./start.sh
 RUN rm /run/nologin
 RUN echo 'sshuser ALL=(ALL:ALL) NOPASSWD:ALL' | sudo EDITOR='tee -a' visudo
-
-ADD ./demo_ansible_docker.pub /home/sshuser/.ssh/authorized_keys
-RUN chown -R sshuser /home/sshuser/.ssh && chmod 0600 /home/sshuser/.ssh/authorized_keys
 ENTRYPOINT ["/usr/sbin/sshd", "-D"]
