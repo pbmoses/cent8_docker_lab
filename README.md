@@ -61,3 +61,5 @@ Sample output:
     "changed": false, 
     "ping": "pong"
 }
+
+Build your playbooks, your roles and experiment. 
