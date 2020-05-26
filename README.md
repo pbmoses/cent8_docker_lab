@@ -36,7 +36,7 @@ To run:
 (run as many as you would like, within reason for your hardware)
 
 
-#docker run -d -p 22 localhost/cent8_ansible:latest
+        #docker run -d -p 22 localhost/cent8_ansible:lv1
 
         #docker ps (look for your port, you need that to login)
         ssh pmo@localhost -p <port from above> -- use the password from the start script for pass
