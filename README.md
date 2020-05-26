@@ -49,7 +49,7 @@ To Generate an inventory.ini file:
 
 To test, use the port that was just located:
 
-       #ssh -i ./demo_ansible_docker sshuser@0.0.0.0 -p 32776
+       #ssh -i ./demo_ansible_docker sshuser@0.0.0.0 -p <port from above>
 
 To test Ansible:
         
