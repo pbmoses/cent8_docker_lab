@@ -2,9 +2,8 @@
 
 #I was tired of slow VMs and other heavyweight tech to test Ansible playbooks and the like that just required SSH, ansible and python. I don't have a large home lab, I work mostly from a laptop and heavy VMs drain the battery. 
 
-#the assumption is you are using your local machine as the Ansible controller with user ansible
+#the assumption is you are using your local machine as the Ansible controller with user sshuser 
 
-#Ansible er should have a key generated and copied to the dir or script modified to distribute that key
 
 
 
