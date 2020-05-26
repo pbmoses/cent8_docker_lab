@@ -13,7 +13,7 @@
 #naturally, there's a bunch this wouldn't handle. It's not be-all-end-all. It's just a simple scrappy tool for testing. 
 
 
-###there's dozen differnt ways to achieve the end need. Do what suits you best. ###
+###there's a dozen different ways to achieve the end need. Do what suits you best. ###
  
 
 # Building 
