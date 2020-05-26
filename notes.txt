@@ -1,8 +1,5 @@
 docker ps --format "{{.Ports}}" | grep 22 | awk -F':|-' 'BEGIN{ print "[all]"};{ print "localhost ansible_ssh_port="$2 }'
 killall = docker kill $(docker ps -q)
 
-docker ps --format "{{.ID}} {{.Ports}}" | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_ssh_port="$3 }'>inventory.ini
-
-ssh-copy-id -p 32785 pmo@localhost
-
+docker ps --format "{{.ID}} {{.Ports}}" | grep 22 | awk -F' |:|-' 'BEGIN{ print "[all]"};{ print $1" ansible_ssh_port="$3 }'>inventory.ini
 
