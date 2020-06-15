@@ -39,7 +39,7 @@ To run:
 (run as many as you would like, within reason for your hardware)
 
 
-        #docker run -d -p 22 localhost/cent8_ansible:lv1
+        #docker run -d -p 22 localhost/cent8_ansible:v1
         (you can spin up as many containers as you need for your testing)
         
         #docker ps (look for your port, you need that to login)
